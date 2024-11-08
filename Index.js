@@ -13,12 +13,13 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 // define /austine route
-app.get('/austine', (req, res) => {
+
+app.get('/Austin.html', (req, res) => {
     // send index.html
-    res.sendFile(__dirname + '/austine.html');
+    res.sendFile(__dirname + '/Austin.html');
 });
 // define /mimi route
-app.get('/mimi', (req, res) => {
+app.get('/mimi.html', (req, res) => {
     // send index.html
     res.sendFile(__dirname + '/mimi.html');
 });
