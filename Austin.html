@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin</title>
+    
+    <!-- Inline Styles -->
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .my-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 70px; /* Adjust to avoid content hiding behind the fixed navbar */
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            width: 300px; /* Fixed width for the card */
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            border-radius: 8px;
+            width: 100%; /* Ensures the image fills the card width */
+            height: 200px; /* Set consistent image height */
+            object-fit: cover;
+        }
+
+        .card p {
+            font-size: 1rem;
+            margin-top: 15px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .my-section {
+                justify-content: center;
+                padding: 15px;
+            }
+
+            .card {
+                width: 100%;  /* Make the cards full width on smaller screens */
+            }
+
+            .card img {
+                height: 180px;  /* Adjust image height for smaller screens */
+            }
+        }
+
+        /* Contact section styles */
+        .contact-section {
+            background-color: #fff;
+            padding: 30px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            
+        }
+
+        .contact-section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #007BFF;
+            
+        }
+
+        .contact-section p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        .contact-section strong {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .contact-section p:last-of-type {
+            margin-bottom: 0;
+            
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 20px;
+            }
+
+            .contact-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .contact-section p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Custom Styles for the Navbar */
+        .custom-navbar {
+            background-color: #2C3E50; /* Dark background color */
+            color: white; /* White text for the navbar */
+            padding: 0.8rem 1rem; /* Slight padding for spacing */
+            border-bottom: 2px solid #34495E; /* Darker border for the bottom */
+            
+        }
+
+        .custom-navbar .navbar-brand {
+            color: #ECF0F1; /* Lighter text color for the brand */
+            font-size: 1.8rem; /* Larger font size for the title */
+            font-weight: bold; /* Make the brand name bold */
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            
+        }
+
+
+
+        .custom-navbar .navbar-nav .nav-link {
+            color: #ECF0F1; /* Lighter text color for the links */
+            font-size: 1.1rem; /* Slightly larger text size for readability */
+            margin-right: 20px; /* Spacing between the nav items */
+            text-transform: uppercase; /* Uppercase for the links */
+            transition: color 0.3s ease; /* Smooth transition for color change */
+            
+        }
+
+
+
+        @media (max-width: 768px) {
+            /* Ensure the navbar brand is centered on smaller screens */
+            .custom-navbar .navbar-brand {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            /* Make the "About" heading hidden on mobile */
+            .custom-navbar h3 {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar (fixed-top class added) -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Austin Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Austin.html">Austin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/mimi.html">Mimi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/ada.html">Adaeze</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- About Section -->
+    <section>
+        <img src="https://gomycodelearn.blob.core.windows.net/profiles/0ee542e7-6a9c-4ba5-a18f-1f3b5d4432a4-133694830299414504.jpg" alt="John's Picture" style="width:200px; height:200px;">
+        <h3 class="ms-3 d-none d-lg-block">About</h3>
+        <p>Austin is a software developer at GoMyCode, where they specialize in creating efficient and innovative software solutions. With expertise in various programming languages and technologies, Austin contributes to building impactful applications and enhancing user experiences. Known for problem-solving skills and a collaborative approach, Austin is dedicated to continuous learning and development in the ever-evolving tech landscape.</p>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="my-section">
+        <div class="card">
+            <img src="https://www.shutterstock.com/shutterstock/photos/1974649991/display_1500/stock-photo-personal-data-protection-antivirus-software-development-internet-network-cyber-security-concept-1974649991.jpg" class="card-img-top" alt="..." height="300px" width="300px">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sunt dignissimos, nihil corporis delectus aperiam impedit optio ae aperiam voluptatibus porro vollaceat ducimus aliquam.</p>
+        </div>
+        <div class="card">
+            <img src="https://www.shutterstock.com/shutterstock/photos/2421700689/display_1500/stock-photo-cyber-security-the-businessperson-pointing-to-the-cybersecurity-icon-and-a-digital-key-in-the-2421700689.jpg" class="card-img-top" alt="..." height="300px" width="300px">
+            <p>Lorem ipsum dolor sit amet catis minima assumenda quam mollitia, laboriosam voluptas, iste, temporibus exercitationem hic soluta autem cum itaque.</p>
+        </div>
+        <div class="card">
+            <img src="https://www.shutterstock.com/shutterstock/photos/2290925683/display_1500/stock-photo-information-search-technology-search-engine-optimization-male-hand-using-a-smartphone-to-search-2290925683.jpg" class="card-img-top" alt="..." height="300px" width="300px">
+            <p>Lorem ipsum dolor sit amet, coconsequatur provident. Nostrum commodi at ratione ab sapiente quos. Voluptatum vitae minus repellendus reprehenderit. ut!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2>Contact Me</h2>
+        <p><strong>Email:</strong> Austin@example.com</p>
+        <p><strong>Phone:</strong> 123-456-7890</p>
+    </section>
+    
+
+    <!-- Bootstrap JS (Optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
